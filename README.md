@@ -26,6 +26,7 @@ match_results = pool.map(trajectory_matching, trajectory)
 pool.close()
 match_results = pd.concat(match_results, ignore_index=True)
 ```
+Matching results are restored in a dataframe match_results: ['TRAJ_ID', 'MATCHED_EDGE', 'MATCHED_NODE'], where 'MATCHED_EDGE' is the matched sequence of road segments, and 'MATCHED_NODE' the matched sequence of road nodes.
 
 # License
 ST-matching is under Apache License. See LICENSE file for full license text.
