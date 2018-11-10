@@ -2,3 +2,30 @@
 A Python implementation of the ST map-matching algorithm, proposed by Lou et.al.[1]
 
 [1] Lou, Y., Zhang, C., Zheng, Y., Xie, X., Wang, W. and Huang, Y., 2009, November. Map-matching for low-sampling-rate GPS trajectories. In Proceedings of the 17th ACM SIGSPATIAL international conference on advances in geographic information systems (pp. 352-361). ACM.
+# Getting Started
+
+Files containing the geographical information of the road network you want to match your trajectories to are requied:
+
+(1) node file: a comma-separated file cotaining at least three columns: ['node', 'lng', 'lat'], where 'node' is the identification of the breakdown points of your road network, 'lng' and 'lat' the longitudes and latitudes of nodes. 
+
+(2) edge file: a comma-separated file cotaining at least three columns: ['edge', 's_node', 'e_node'], where 'edge' is the identification of the road segments of your road network, 's_node' and 'e_node' the begining nodes and ending nodes of segments.
+
+(3) network properties file: a comma-separated file cotaining at least four columns: ['section_id', 's_node', 'e_node', 'length'], where 'section_id' is the identification of the road segments of your road network, 's_node' and 'e_node' the begining nodes and ending nodes of segments, 'length' the lengths of road segments.
+
+The trajectory file must be a comma-separated file cotaining at least three columns: ['TRAJ_ID', 'LON', 'LAT'], where 'TRAJ_ID' is the identification of each trajectory.
+
+An example to run this library in parallel:
+```
+from STmatching_distribution_ver import *
+from multiprocessing import cpu_count, Pool
+
+trajectory = pd.read_csv('your_trajectory_path')
+trajectory = data_convert(trajectory)
+pool = Pool()
+match_results = pool.map(trajectory_matching, trajectory)
+pool.close()
+match_results = pd.concat(match_results, ignore_index=True)
+```
+
+# License
+ST-matching is under Apache License. See LICENSE file for full license text.
