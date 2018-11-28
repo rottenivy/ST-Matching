@@ -8,7 +8,7 @@ Files containing the geographical information of the road network you want to ma
 
 (1) node file: a comma-separated file cotaining at least three columns: ['node', 'lng', 'lat'], where 'node' is the identification of the breakdown points of your road network, 'lng' and 'lat' the longitudes and latitudes of nodes. 
 
-(2) edge file: a comma-separated file cotaining at least three columns: ['edge', 's_node', 'e_node'], where 'edge' is the identification of the road segments of your road network, 's_node' and 'e_node' the begining nodes and ending nodes of segments.
+(2) edge file: a comma-separated file cotaining at least three columns: ['edge', 's_node', 'e_node', 's_lng', 's_lat', 'e_lng', 'e_lat'], where 'edge' is the identification of the road segments of your road network, 's_node' and 'e_node' the begining nodes and ending nodes of segments.
 
 (3) network properties file: a comma-separated file cotaining at least four columns: ['section_id', 's_node', 'e_node', 'length'], where 'section_id' is the identification of the road segments of your road network, 's_node' and 'e_node' the begining nodes and ending nodes of segments, 'length' the lengths of road segments.
 
