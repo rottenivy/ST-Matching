@@ -36,7 +36,7 @@ def network_data():
     nx_vertice = pd.read_csv('./Point.csv', usecols=['node', 'lng', 'lat'])
     vertice_dict = nx_vertice.set_index('node').T.to_dict('list')
 
-    nx_edge = pd.read_csv('./Edge.csv', usecols=['edge', 's_node', 'e_node', 's_lng', 's_lat', 'e_lng', 'e_lat'])
+    nx_edge = pd.read_csv('./Edge.csv', usecols=['edge', 's_node', 'e_node', 's_lng', 's_lat', 'e_lng', 'e_lat', 'c_lng', 'c_lat'])
     edge_dict = nx_edge.set_index('edge').T.to_dict('list')
 
     rdnetwork = pd.read_csv('./Network.csv', usecols=['section_id', 's_node', 'e_node', 'length'])
