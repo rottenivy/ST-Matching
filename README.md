@@ -1,5 +1,5 @@
-# ST-matching (a map matching algorithm)
-A Python implementation of the ST map-matching algorithm, proposed by Lou et.al.[1]
+# ST-Matching
+A Python implementation of the ST-Matching algorithm for low-sampling-rate GPS trajectories [1].
 
 > [1] Lou, Y., Zhang, C., Zheng, Y., Xie, X., Wang, W. and Huang, Y., 2009, November. Map-matching for low-sampling-rate GPS trajectories. In Proceedings of the 17th ACM SIGSPATIAL international conference on advances in geographic information systems (pp. 352-361). ACM.
 # Getting Started
@@ -31,4 +31,4 @@ match_results = pd.concat(match_results, ignore_index=True)
 Matching results are restored in a dataframe match_results: ['TRAJ_ID', 'MATCHED_EDGE', 'MATCHED_NODE'], where 'MATCHED_EDGE' is the matched sequence of road segments, and 'MATCHED_NODE' the matched sequence of road nodes.
 
 # License
-ST-matching is under Apache License. See LICENSE file for full license text.
+ST-Matching is under Apache License. See LICENSE file for full license text.
