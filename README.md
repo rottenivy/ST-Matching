@@ -1,7 +1,10 @@
 # ST-Matching
-A Python implementation of the ST-Matching algorithm for low-sampling-rate GPS trajectories [1].
+A Python implementation of the ST-Matching algorithm for low-sampling-rate GPS trajectories [1]. 
 
 > [1] Lou, Y., Zhang, C., Zheng, Y., Xie, X., Wang, W. and Huang, Y., 2009, November. Map-matching for low-sampling-rate GPS trajectories. In Proceedings of the 17th ACM SIGSPATIAL international conference on advances in geographic information systems (pp. 352-361). ACM.
+
+Note that codes of the 'S (spatial)' part of the algorithm is currently unavailable in this distribution.
+
 # Getting Started
 
 Files containing the geographical information of the road network you want to match your trajectories to are requied:
