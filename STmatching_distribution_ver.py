@@ -1,5 +1,4 @@
-# Created by Zhihao Zheng
-# in 2018
+# https://github.com/rottenivy
 # This Repository is under Apache License. See LICENSE file for full license text.
 
 
